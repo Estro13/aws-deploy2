@@ -5,6 +5,6 @@ import { Job } from 'bull';
 export class Consumer {
   @Process('write-hello')
   async writeHello({ data }: Job) {
-    console.log(data);
+    console.log(`----------DATA----------, ${data}`);
   }
 }
