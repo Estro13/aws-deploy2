@@ -6,5 +6,6 @@ export class Consumer {
   @Process('write-hello')
   async writeHello({ data }: Job) {
     console.log(`----------DATA----------, ${data}`);
+    // throw new BadRequestException('ERROR');
   }
 }

@@ -13,9 +13,11 @@ const url = new URL(process.env.STACKHERO_REDIS_URL_TLS);
     QueueModule,
     BullModule.forRoot({
       redis: {
+        // host: process.env.REDIS_HOST,
+        // port: 6379,
         host: url.hostname,
         port: +url.port,
-        password: url.password,
+        // password: url.password,
         // db: 0,
         // tls: {},
       },

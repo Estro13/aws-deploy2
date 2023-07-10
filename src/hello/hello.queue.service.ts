@@ -10,6 +10,10 @@ export class HelloQueueService {
   ) {}
 
   async put() {
-    await this.writeQueue.add('write-hello', { delay: 3000 }, { delay: 3000 });
+    await this.writeQueue.add(
+      'write-hello',
+      { name: 'Yura Pezdyuk' },
+      { delay: 3000 },
+    );
   }
 }
