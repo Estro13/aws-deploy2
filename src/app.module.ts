@@ -5,7 +5,6 @@ import { BullModule } from '@nestjs/bull';
 import { HelloModule } from './hello/hello.module';
 import { QueueModule } from './queue/queue.module';
 
-// const url = new URL(process.env.STACKHERO_REDIS_URL_TLS);
 @Module({
   imports: [
     HelloModule,
@@ -19,7 +18,8 @@ import { QueueModule } from './queue/queue.module';
         // password: url.password,
         // db: 0,
         // tls: {},
-        host: 'name.bwctha.ng.0001.euw3.cache.amazonaws.com',
+        // host: process.env.REDIS_HOST,
+        host: '127.0.0.1',
         port: 6379,
       },
     }),
