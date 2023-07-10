@@ -15,7 +15,7 @@ import { QueueModule } from './queue/queue.module';
       redis: {
         // host: process.env.REDIS_HOST,
         // port: number,
-        host: '127.0.0.2',
+        host: '127.0.0.1',
         port: 6379,
       },
     }),
