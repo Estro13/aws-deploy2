@@ -5,6 +5,8 @@ import { BullModule } from '@nestjs/bull';
 import { HelloModule } from './hello/hello.module';
 import { QueueModule } from './queue/queue.module';
 
+const changedString = parseFloat(process.env.REDIS_PORT);
+
 @Module({
   imports: [
     HelloModule,
@@ -20,7 +22,7 @@ import { QueueModule } from './queue/queue.module';
         // tls: {},
         // host: process.env.REDIS_HOST,
         host: process.env.REDIS_HOST,
-        port: 6379,
+        port: changedString,
       },
     }),
   ],
