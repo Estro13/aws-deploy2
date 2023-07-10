@@ -19,7 +19,7 @@ import { QueueModule } from './queue/queue.module';
         // db: 0,
         // tls: {},
         // host: process.env.REDIS_HOST,
-        host: '127.0.0.1',
+        host: process.env.REDIS_HOST,
         port: 6379,
       },
     }),
