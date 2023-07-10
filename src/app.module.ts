@@ -19,7 +19,7 @@ import { QueueModule } from './queue/queue.module';
         // password: url.password,
         // db: 0,
         // tls: {},
-        host: '127.0.0.1',
+        host: 'name.bwctha.ng.0001.euw3.cache.amazonaws.com',
         port: 6379,
       },
     }),
