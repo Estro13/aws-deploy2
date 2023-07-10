@@ -5,7 +5,7 @@ import { BullModule } from '@nestjs/bull';
 import { HelloModule } from './hello/hello.module';
 import { QueueModule } from './queue/queue.module';
 
-const changedString = parseFloat(process.env.REDIS_PORT);
+// const number = parseFloat(process.env.REDIS_PORT);
 
 @Module({
   imports: [
@@ -14,15 +14,9 @@ const changedString = parseFloat(process.env.REDIS_PORT);
     BullModule.forRoot({
       redis: {
         // host: process.env.REDIS_HOST,
-        // port: 6379,
-        // host: url.hostname,
-        // port: +url.port,
-        // password: url.password,
-        // db: 0,
-        // tls: {},
-        // host: process.env.REDIS_HOST,
-        host: process.env.REDIS_HOST,
-        port: changedString,
+        // port: number,
+        host: '127.0.0.2',
+        port: 6379,
       },
     }),
   ],
